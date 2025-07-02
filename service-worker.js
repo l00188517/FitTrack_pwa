@@ -1,11 +1,11 @@
 const CACHE_NAME = 'fitlife-cache-v1';
 const urlsToCache = [
-  '/',
-  '/index.html',
-  '/styles/main.css', // Assuming you have a main CSS file
-  '/scripts/app.js',   // Assuming your main JS file
-  '/icons/icon-192x192.png',
-  '/icons/icon-512x512.png',
+  './',
+  './index.html',
+  './styles/main.css', // Assuming you have a main CSS file
+  './scripts/app.js',   // Assuming your main JS file
+  './icons/icon-192x192.png',
+  './icons/icon-512x512.png',
   // Add other critical assets (images, fonts, etc.) that make up your app shell
 ];
 
