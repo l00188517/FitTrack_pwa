@@ -1,11 +1,11 @@
 {
-    "name": "FitLife Tracker",
-    "short_name": "FitLife",
-    "description": "Your ultimate companion for fitness, nutrition, and habit tracking.",
+    "name": "NutriTrack Pro",
+    "short_name": "NutriTrack",
+    "description": "Track your nutrition effortlessly.",
     "start_url": "./index.html",
     "display": "standalone",
     "background_color": "#ffffff",
-    "theme_color": "#2196F3",
+    "theme_color": "#4CAF50",
     "icons": [
       {
         "src": "./icons/icon-192x192.png",
@@ -16,9 +16,19 @@
         "src": "./icons/icon-512x512.png",
         "sizes": "512x512",
         "type": "image/png"
+      },
+      {
+        "src": "./icons/icon-144x144.png",
+        "sizes": "144x144",
+        "type": "image/png"
+      },
+      {
+        "src": "./icons/icon-72x72.png",
+        "sizes": "72x72",
+        "type": "image/png"
       }
-      // Add more icon sizes for different devices (e.g., 144x144, 72x72)
+      // You should generate and add more icon sizes for better compatibility across devices
     ],
-    "orientation": "portrait", // Optional: Control orientation
-    "prefer_related_applications": false // Set to false to encourage PWA installation over native app
+    "orientation": "portrait",
+    "prefer_related_applications": false
   }

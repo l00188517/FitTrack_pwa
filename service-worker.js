@@ -1,11 +1,13 @@
-const CACHE_NAME = 'fitlife-cache-v1';
+const CACHE_NAME = 'nutritrack-cache-v1'; // Renamed cache for this app
 const urlsToCache = [
   './',
   './index.html',
-  './styles/main.css', // Assuming you have a main CSS file
-  './app.js',   // Assuming your main JS file
+  './styles/main.css',
+  './app.js',
+  './manifest.json', // It's good practice to cache the manifest as well
   './icons/icon-192x192.png',
   './icons/icon-512x512.png',
+  './favicon.ico'
   // Add other critical assets (images, fonts, etc.) that make up your app shell
 ];
 
@@ -23,7 +25,6 @@ self.addEventListener('fetch', (event) => {
   event.respondWith(
     caches.match(event.request)
       .then((response) => {
-        // Cache hit - return response
         if (response) {
           return response;
         }
@@ -39,7 +40,6 @@ self.addEventListener('activate', (event) => {
       return Promise.all(
         cacheNames.map((cacheName) => {
           if (cacheWhitelist.indexOf(cacheName) === -1) {
-            // Delete old caches
             return caches.delete(cacheName);
           }
         })
@@ -47,8 +47,3 @@ self.addEventListener('activate', (event) => {
     })
   );
 });
-
-// For more advanced caching strategies (e.g., Network falling back to Cache, Cache falling back to Network)
-// you would implement more complex logic within the fetch event listener.
-// For data synchronization (e.g., submitting fitness logs offline and syncing later),
-// you would use Background Sync API (via service worker).
