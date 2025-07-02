@@ -1,14 +1,19 @@
-const CACHE_NAME = 'nutritrack-cache-v1'; // Renamed cache for this app
+const CACHE_NAME = 'nutritrack-cache-v1';
 const urlsToCache = [
   './',
   './index.html',
   './styles/main.css',
   './app.js',
-  './manifest.json', // It's good practice to cache the manifest as well
+  './manifest.json',
+  './favicon.ico',
+  './icons/icon-72x72.png',
+  './icons/icon-96x96.png',
+  './icons/icon-128x128.png',
+  './icons/icon-144x144.png',
+  './icons/icon-152x152.png',
   './icons/icon-192x192.png',
-  './icons/icon-512x512.png',
-  './favicon.ico'
-  // Add other critical assets (images, fonts, etc.) that make up your app shell
+  './icons/icon-384x384.png',
+  './icons/icon-512x512.png'
 ];
 
 self.addEventListener('install', (event) => {

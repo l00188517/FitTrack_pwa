@@ -141,3 +141,5 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initial render
     renderMeals();
 });
+
+
